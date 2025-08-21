@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0f1d3b" />
+    <title>LuxeBuild Realty — Luxury Construction & Real Estate</title>
+    <meta name="description" content="A sleek, professional, and luxurious landing page template for construction and real estate — optimized for lead generation, property showcase, and trust-building." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f1d3b'/%3E%3Cpath d='M12 42 L32 22 L52 42' stroke='%23c7a36f' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='28' r='4' fill='%23c7a36f'/%3E%3C/svg%3E" />
+
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+
+    <!-- Schema: Organization / RealEstateAgent -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "RealEstateAgent",
+        "name": "LuxeBuild Realty",
+        "url": "https://luxebuild.example.com",
+        "logo": "https://luxebuild.example.com/logo.png",
+        "image": "https://luxebuild.example.com/hero.jpg",
+        "telephone": "+1-555-013-0123",
+        "priceRange": "$$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1000 Grand Ave",
+          "addressLocality": "Metropolis",
+          "addressRegion": "CA",
+          "postalCode": "94000",
+          "addressCountry": "US"
+        },
+        "openingHours": "Mo-Fr 09:00-18:00",
+        "foundingDate": "2012",
+        "currenciesAccepted": "USD",
+        "paymentAccepted": "Cash, Credit Card, Wire Transfer",
+        "sameAs": [
+          "https://www.facebook.com/luxebuild",
+          "https://www.instagram.com/luxebuild",
+          "https://www.linkedin.com/company/luxebuild-realty"
+        ]
+      }
+    </script>
+
+    <!-- Schema: Website with potential search -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "https://luxebuild.example.com",
+        "name": "LuxeBuild Realty",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://luxebuild.example.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-to-content" href="#main">Skip to content</a>
+
+    <!-- Header -->
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a href="#top" class="brand" aria-label="LuxeBuild Realty">
+          <svg width="32" height="32" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="12" fill="var(--brand-ink)"/><path d="M12 42 L32 22 L52 42" stroke="var(--brand-gold)" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="32" cy="28" r="4" fill="var(--brand-gold)"/></svg>
+          <span class="brand-name">LuxeBuild</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <button class="nav-toggle" aria-expanded="false" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+          <ul class="nav-list">
+            <li><a href="#properties">Properties</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#locations">Locations</a></li>
+            <li><a href="#calculator">Calculator</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-ctas">
+          <button class="btn btn-ghost" id="darkToggle" aria-label="Toggle dark mode">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 1 0 9.79 9.79Z"/></svg>
+          </button>
+          <button class="btn btn-primary show-lead-modal">Schedule a Tour</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero-slider" role="region" aria-label="Featured properties">
+        <div class="hero-slide" data-title="Skyline Penthouse" data-tag="Now Available">
+          <div class="hero-media" data-kind="image"></div>
+          <div class="hero-overlay"></div>
+          <div class="hero-content container">
+            <h1 class="display">Elevate your living</h1>
+            <p class="subhead">Curated residences and bespoke construction for those who expect more.</p>
+            <div class="hero-actions">
+              <a href="#properties" class="btn btn-primary">View Listings</a>
+              <button class="btn btn-outline show-lead-modal">Get a Quote</button>
+            </div>
+          </div>
+        </div>
+        <div class="hero-slide" data-title="Marina Residences" data-tag="Limited" >
+          <div class="hero-media" data-kind="image"></div>
+          <div class="hero-overlay"></div>
+          <div class="hero-content container">
+            <h1 class="display">Built for a lifetime</h1>
+            <p class="subhead">Award-winning craftsmanship with timeless materials and modern performance.</p>
+            <div class="hero-actions">
+              <a href="#services" class="btn btn-primary">Our Expertise</a>
+              <button class="btn btn-outline show-lead-modal">Request Callback</button>
+            </div>
+          </div>
+        </div>
+        <div class="hero-slide" data-title="Hillside Estates" data-tag="Sold Out">
+          <div class="hero-media" data-kind="image"></div>
+          <div class="hero-overlay"></div>
+          <div class="hero-content container">
+            <h1 class="display">Design without compromise</h1>
+            <p class="subhead">Where luxury aesthetics meet precision engineering and sustainable innovation.</p>
+            <div class="hero-actions">
+              <a href="#about" class="btn btn-primary">Why LuxeBuild</a>
+              <button class="btn btn-outline show-lead-modal">Talk to Us</button>
+            </div>
+          </div>
+        </div>
+        <div class="hero-dots" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <main id="main">
+      <!-- Properties & Filters -->
+      <section class="section properties" id="properties">
+        <div class="container section-header">
+          <h2 class="title">Featured Properties</h2>
+          <p class="muted">Explore our curated collection of luxury residences.</p>
+        </div>
+        <div class="container filters">
+          <div class="filter-group">
+            <label>
+              <span>Location</span>
+              <select id="filter-location">
+                <option value="">All</option>
+              </select>
+            </label>
+            <label>
+              <span>Type</span>
+              <select id="filter-type">
+                <option value="">All</option>
+              </select>
+            </label>
+            <label>
+              <span>Status</span>
+              <select id="filter-status">
+                <option value="">All</option>
+              </select>
+            </label>
+          </div>
+          <div class="filter-group">
+            <label class="price-range">
+              <span>Min Price</span>
+              <input type="number" id="min-price" placeholder="0" inputmode="numeric" />
+            </label>
+            <label class="price-range">
+              <span>Max Price</span>
+              <input type="number" id="max-price" placeholder="5000000" inputmode="numeric" />
+            </label>
+          </div>
+          <div class="filter-group">
+            <label>
+              <span>Sort</span>
+              <select id="sort-by">
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="newest">Newest</option>
+              </select>
+            </label>
+            <label class="search">
+              <span class="sr-only">Search</span>
+              <input type="search" id="search" placeholder="Search by title or location" />
+            </label>
+            <button class="btn btn-ghost" id="clear-filters">Clear</button>
+          </div>
+        </div>
+        <div class="container">
+          <div id="properties-grid" class="grid reveal"></div>
+          <p id="results-count" class="muted"></p>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section class="section services" id="services">
+        <div class="container section-header">
+          <h2 class="title">Services & Expertise</h2>
+          <p class="muted">From groundbreaking to grand opening — we deliver end‑to‑end excellence.</p>
+        </div>
+        <div class="container grid services-grid reveal">
+          <article class="card service">
+            <div class="icon lux-icon-1"></div>
+            <h3>Custom Home Construction</h3>
+            <p>Bespoke residences crafted with precision engineering and timeless materials.</p>
+          </article>
+          <article class="card service">
+            <div class="icon lux-icon-2"></div>
+            <h3>Renovations & Additions</h3>
+            <p>Transformative upgrades that enhance functionality and elevate aesthetics.</p>
+          </article>
+          <article class="card service">
+            <div class="icon lux-icon-3"></div>
+            <h3>Project Management</h3>
+            <p>On‑time, on‑budget delivery through rigorous planning and coordination.</p>
+          </article>
+          <article class="card service">
+            <div class="icon lux-icon-4"></div>
+            <h3>Real Estate Advisory</h3>
+            <p>Strategic guidance on acquisitions, valuation, and portfolio optimization.</p>
+          </article>
+          <article class="card service">
+            <div class="icon lux-icon-5"></div>
+            <h3>Interior Architecture</h3>
+            <p>Elevated interiors blending form, function, and crafted details.</p>
+          </article>
+          <article class="card service">
+            <div class="icon lux-icon-6"></div>
+            <h3>Sustainability & LEED</h3>
+            <p>High‑performance building practices for lower impact and ownership cost.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- About & Trust -->
+      <section class="section about" id="about">
+        <div class="container grid about-grid reveal">
+          <div>
+            <h2 class="title">About LuxeBuild</h2>
+            <p>For over a decade, we have shaped skylines and crafted homes that define modern luxury. Our team unites award‑winning architects, engineers, and artisans to deliver projects where every detail matters.</p>
+            <ul class="facts">
+              <li><strong>250+</strong> Projects Delivered</li>
+              <li><strong>45</strong> Industry Awards</li>
+              <li><strong>98%</strong> Client Satisfaction</li>
+            </ul>
+            <div class="trust-badges" aria-label="Trust badges">
+              <span class="badge">SSL Secured</span>
+              <span class="badge">BBB A+</span>
+              <span class="badge">Lic. #CAL‑LBR‑94231</span>
+            </div>
+          </div>
+          <div class="about-media">
+            <div class="frame"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team -->
+      <section class="section team" id="team">
+        <div class="container section-header">
+          <h2 class="title">Our Team</h2>
+          <p class="muted">A multidisciplinary group of builders, designers, and advisors.</p>
+        </div>
+        <div class="container grid team-grid reveal" id="team-grid"></div>
+      </section>
+
+      <!-- Partners & Testimonials -->
+      <section class="section testimonials" id="testimonials">
+        <div class="container section-header">
+          <h2 class="title">Trusted by Partners & Clients</h2>
+          <p class="muted">What our clients and collaborators say about working with us.</p>
+        </div>
+        <div class="container partners reveal">
+          <div class="partner-logo">AUREUM</div>
+          <div class="partner-logo">CRESCENDO</div>
+          <div class="partner-logo">MONARCH</div>
+          <div class="partner-logo">PARAGON</div>
+          <div class="partner-logo">VERTEX</div>
+        </div>
+        <div class="container testimonial-slider reveal" aria-label="Client testimonials" role="region">
+          <div class="testimonial-track" id="testimonial-track">
+            <article class="testimonial">
+              <p>“LuxeBuild exceeded expectations at every turn — craftsmanship, communication, and care.”</p>
+              <div class="meta">
+                <span class="name">S. Carter</span>
+                <span class="role">Penthouse Owner</span>
+              </div>
+            </article>
+            <article class="testimonial">
+              <p>“A rare partner that blends design sensitivity with construction rigor. Flawless delivery.”</p>
+              <div class="meta">
+                <span class="name">A. Kim</span>
+                <span class="role">Architect</span>
+              </div>
+            </article>
+            <article class="testimonial">
+              <p>“Their team’s integrity and attention to detail are unmatched in our market.”</p>
+              <div class="meta">
+                <span class="name">D. Patel</span>
+                <span class="role">Developer</span>
+              </div>
+            </article>
+          </div>
+          <div class="testimonial-dots" id="testimonial-dots"></div>
+        </div>
+        <div class="container video-testimonial reveal">
+          <button class="video-card" id="open-video" aria-label="Play video testimonial">
+            <div class="play"></div>
+            <div class="video-bg"></div>
+            <span>Watch Client Story</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Locations / Map -->
+      <section class="section locations" id="locations">
+        <div class="container section-header">
+          <h2 class="title">Locations</h2>
+          <p class="muted">Visit our offices — or schedule a private tour.</p>
+        </div>
+        <div class="container map-ui reveal">
+          <div class="map-tabs" role="tablist" aria-label="Office locations">
+            <button role="tab" aria-selected="true" class="tab active" data-map="hq">HQ</button>
+            <button role="tab" aria-selected="false" class="tab" data-map="downtown">Downtown</button>
+            <button role="tab" aria-selected="false" class="tab" data-map="uptown">Uptown</button>
+          </div>
+          <div class="map-panels">
+            <iframe class="map-panel active" id="map-hq" title="HQ map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=San%20Francisco%20CA&output=embed"></iframe>
+            <iframe class="map-panel" id="map-downtown" title="Downtown map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Los%20Angeles%20CA&output=embed"></iframe>
+            <iframe class="map-panel" id="map-uptown" title="Uptown map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=San%20Diego%20CA&output=embed"></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mortgage Calculator -->
+      <section class="section calculator" id="calculator">
+        <div class="container section-header">
+          <h2 class="title">Mortgage Calculator</h2>
+          <p class="muted">Estimate your monthly payments in real‑time.</p>
+        </div>
+        <div class="container grid calc-grid reveal">
+          <form id="calc-form" class="card calc-form" novalidate>
+            <label><span>Home Price</span><input type="number" id="calc-price" value="1250000" min="0" /></label>
+            <label><span>Down Payment (%)</span><input type="number" id="calc-down" value="20" min="0" max="100" /></label>
+            <label><span>Interest Rate (APR %)</span><input type="number" id="calc-rate" value="5" step="0.01" min="0" /></label>
+            <label><span>Term (years)</span>
+              <select id="calc-term">
+                <option value="30" selected>30</option>
+                <option value="20">20</option>
+                <option value="15">15</option>
+              </select>
+            </label>
+            <label><span>Property Tax (annual)</span><input type="number" id="calc-tax" value="9500" min="0" /></label>
+            <label><span>HOA (monthly)</span><input type="number" id="calc-hoa" value="350" min="0" /></label>
+          </form>
+          <div class="card calc-result">
+            <h3>Estimated Monthly Payment</h3>
+            <div class="payment" id="calc-payment">$—</div>
+            <ul class="breakdown" id="calc-breakdown"></ul>
+            <button class="btn btn-primary show-lead-modal">Get Pre‑Approved</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blog / News -->
+      <section class="section blog" id="blog">
+        <div class="container section-header">
+          <h2 class="title">Insights & News</h2>
+          <p class="muted">Market perspectives, design notes, and project updates.</p>
+        </div>
+        <div class="container grid blog-grid reveal" id="blog-grid"></div>
+      </section>
+
+      <!-- Contact / Lead -->
+      <section class="section contact" id="contact">
+        <div class="container section-header">
+          <h2 class="title">Let’s Talk</h2>
+          <p class="muted">Tell us about your goals — we’ll tailor a plan for you.</p>
+        </div>
+        <div class="container grid contact-grid reveal">
+          <form id="contact-form" class="card contact-form" novalidate>
+            <div class="form-row">
+              <label><span>Full Name</span><input type="text" name="name" required /></label>
+              <label><span>Email</span><input type="email" name="email" required /></label>
+            </div>
+            <div class="form-row">
+              <label><span>Phone</span><input type="tel" name="phone" required /></label>
+              <label><span>Preferred Contact</span>
+                <select name="contact_pref">
+                  <option value="call">Call</option>
+                  <option value="sms">Text</option>
+                  <option value="email">Email</option>
+                </select>
+              </label>
+            </div>
+            <div class="form-row">
+              <label class="span-2"><span>Message</span><textarea name="message" rows="4" placeholder="Briefly describe your project or interest" required></textarea></label>
+            </div>
+            <div class="form-row">
+              <label class="checkbox"><input type="checkbox" name="callback" /> Request a call‑back</label>
+            </div>
+            <div class="form-row">
+              <button class="btn btn-primary" type="submit">Send Message</button>
+              <div class="form-note">By sending, you agree to our <a href="#">Privacy Policy</a>.</div>
+            </div>
+          </form>
+          <aside class="card contact-side">
+            <h3>Connect</h3>
+            <ul class="contact-list">
+              <li><strong>Phone:</strong> <a href="tel:+15550130123">+1 (555) 013‑0123</a></li>
+              <li><strong>Email:</strong> <a href="mailto:hello@luxebuild.example">hello@luxebuild.example</a></li>
+              <li><strong>Address:</strong> 1000 Grand Ave, Metropolis, CA</li>
+            </ul>
+            <div class="newsletter">
+              <h4>Subscribe</h4>
+              <form id="newsletter-form" class="newsletter-form" novalidate>
+                <input type="email" placeholder="Your email" aria-label="Email for newsletter" required />
+                <button class="btn btn-outline" type="submit">Join</button>
+              </form>
+              <p class="muted small">Get monthly market insights and exclusive listings.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container grid footer-grid">
+        <div class="brand-col">
+          <a href="#top" class="brand" aria-label="LuxeBuild Realty">
+            <svg width="28" height="28" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="12" fill="var(--brand-ink)"/><path d="M12 42 L32 22 L52 42" stroke="var(--brand-gold)" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="32" cy="28" r="4" fill="var(--brand-gold)"/></svg>
+            <span class="brand-name">LuxeBuild</span>
+          </a>
+          <p class="muted small">Fine construction and curated real estate. CA Lic. #CAL‑LBR‑94231</p>
+          <div class="socials">
+            <a href="#" aria-label="Instagram" class="social"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm6.5-.25a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/></svg></a>
+            <a href="#" aria-label="LinkedIn" class="social"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4zM8.5 8h3.6v2.2h.05c.5-.95 1.75-1.95 3.6-1.95 3.85 0 4.55 2.5 4.55 5.8V24h-4v-7.9c0-1.9-.05-4.35-2.65-4.35-2.7 0-3.1 2.1-3.1 4.2V24h-4z"/></svg></a>
+            <a href="#" aria-label="YouTube" class="social"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.2 31.2 0 0 0 24 12a31.2 31.2 0 0 0-.5-5.8zM9.8 15.5v-7l6.2 3.5z"/></svg></a>
+          </div>
+        </div>
+        <nav class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#blog">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Construction</a></li>
+            <li><a href="#services">Renovations</a></li>
+            <li><a href="#services">Advisory</a></li>
+            <li><a href="#calculator">Calculator</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#properties">Listings</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#locations">Locations</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="container small fineprint">
+        <p>© <span id="year"></span> LuxeBuild Realty. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Sticky Floating Contact -->
+    <button class="floating-contact show-lead-modal" aria-label="Contact us">
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21 15.46V20a1 1 0 0 1-1.22 1 19.85 19.85 0 0 1-8.64-3.07 19.5 19.5 0 0 1-6-6A19.85 19.85 0 0 1 2 4.22 1 1 0 0 1 3 3h4.54a1 1 0 0 1 1 .76 12.9 12.9 0 0 0 .7 2.26 1 1 0 0 1-.23 1.05L7.91 8.91a16 16 0 0 0 6 6l1.84-1.12a1 1 0 0 1 1.05-.23 12.9 12.9 0 0 0 2.26.7 1 1 0 0 1 .76 1.2Z"/></svg>
+    </button>
+
+    <!-- Lead Modal -->
+    <dialog id="lead-modal" class="modal">
+      <form id="lead-form" class="modal-content" method="dialog" novalidate>
+        <button class="modal-close" value="cancel" aria-label="Close">✕</button>
+        <h3>Request a Call‑Back</h3>
+        <p class="muted">Tell us a bit about you — we’ll get back within a business day.</p>
+        <div class="form-row">
+          <label><span>Full Name</span><input type="text" name="name" required /></label>
+          <label><span>Email</span><input type="email" name="email" required /></label>
+        </div>
+        <div class="form-row">
+          <label><span>Phone</span><input type="tel" name="phone" required /></label>
+          <label><span>Interested In</span>
+            <select name="interest">
+              <option>Buying</option>
+              <option>Selling</option>
+              <option>Construction</option>
+              <option>Renovation</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-row">
+          <label class="span-2"><span>Notes</span><textarea name="notes" rows="3" placeholder="Optional"></textarea></label>
+        </div>
+        <div class="form-row">
+          <button class="btn btn-primary" value="submit">Submit</button>
+        </div>
+      </form>
+    </dialog>
+
+    <!-- Property Modal -->
+    <dialog id="property-modal" class="modal">
+      <div class="modal-content property-modal-content">
+        <button class="modal-close" value="cancel" aria-label="Close">✕</button>
+        <div class="property-modal-body">
+          <div class="gallery" id="property-gallery"></div>
+          <div class="details" id="property-details"></div>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Video Modal -->
+    <dialog id="video-modal" class="modal">
+      <div class="modal-content video-modal-content">
+        <button class="modal-close" value="cancel" aria-label="Close">✕</button>
+        <div class="video-wrapper">
+          <iframe id="video-iframe" title="Video testimonial" width="560" height="315" src="" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+    </dialog>
+
+    <div id="toast" role="status" aria-live="polite"></div>
+
+    <script src="/assets/js/main.js" defer></script>
+  </body>
+  </html>
+
