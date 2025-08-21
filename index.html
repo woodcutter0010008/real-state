@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxeEstates - Premium Construction & Real Estate</title>
+    <meta name="description" content="Luxury construction and real estate services. Find your dream property or build your vision with our expert team.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='16' fill='%231a237e'/><path d='M8 18L16 10L24 18V26H20V20H12V26H8V18Z' fill='%23ffd700'/></svg>">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://luxeestates.com/">
+    <meta property="og:title" content="LuxeEstates - Premium Construction & Real Estate">
+    <meta property="og:description" content="Discover exceptional luxury properties and custom construction services. Your dream home awaits with our premium collection.">
+    <meta property="og:image" content="https://luxeestates.com/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://luxeestates.com/">
+    <meta property="twitter:title" content="LuxeEstates - Premium Construction & Real Estate">
+    <meta property="twitter:description" content="Discover exceptional luxury properties and custom construction services. Your dream home awaits with our premium collection.">
+    <meta property="twitter:image" content="https://luxeestates.com/og-image.jpg">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "RealEstateAgent",
+        "name": "LuxeEstates",
+        "description": "Premium construction and real estate services",
+        "url": "https://luxeestates.com",
+        "telephone": "+1-555-0123",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Luxury Avenue",
+            "addressLocality": "Beverly Hills",
+            "addressRegion": "CA",
+            "postalCode": "90210"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <div class="theme-toggle">
+        <button id="theme-toggle-btn" class="theme-btn">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>LuxeEstates</h2>
+                <span class="logo-tagline">Premium Properties</span>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#properties" class="nav-link">Properties</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="btn-secondary">+1-555-0123</button>
+                <button class="btn-primary" onclick="openContactModal()">Get Quote</button>
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-video">
+            <video autoplay muted loop playsinline>
+                <source src="hero-video.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Luxury Living</span>
+                    <span class="title-line">Redefined</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Discover exceptional properties and construction services that exceed expectations. 
+                    Your dream home awaits with our premium collection of luxury estates.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Properties Sold</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">$2.5B+</span>
+                        <span class="stat-label">Total Sales</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Client Satisfaction</span>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <button class="btn-primary-large" onclick="scrollToSection('properties')">
+                        <i class="fas fa-search"></i>
+                        Explore Properties
+                    </button>
+                    <button class="btn-secondary-large" onclick="openContactModal()">
+                        <i class="fas fa-phone"></i>
+                        Schedule Tour
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Search Bar -->
+    <section class="quick-search">
+        <div class="container">
+            <div class="search-form">
+                <div class="search-field">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <select id="location">
+                        <option value="">Location</option>
+                        <option value="beverly-hills">Beverly Hills</option>
+                        <option value="manhattan">Manhattan</option>
+                        <option value="miami">Miami Beach</option>
+                        <option value="malibu">Malibu</option>
+                    </select>
+                </div>
+                <div class="search-field">
+                    <i class="fas fa-home"></i>
+                    <select id="property-type">
+                        <option value="">Property Type</option>
+                        <option value="house">House</option>
+                        <option value="condo">Condo</option>
+                        <option value="penthouse">Penthouse</option>
+                        <option value="villa">Villa</option>
+                    </select>
+                </div>
+                <div class="search-field">
+                    <i class="fas fa-dollar-sign"></i>
+                    <select id="price-range">
+                        <option value="">Price Range</option>
+                        <option value="1-2">$1M - $2M</option>
+                        <option value="2-5">$2M - $5M</option>
+                        <option value="5-10">$5M - $10M</option>
+                        <option value="10+">$10M+</option>
+                    </select>
+                </div>
+                <button class="search-btn" onclick="searchProperties()">
+                    <i class="fas fa-search"></i>
+                    Search
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section id="properties" class="properties">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Properties</h2>
+                <p class="section-subtitle">Discover our handpicked selection of luxury properties</p>
+            </div>
+            
+            <div class="property-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="sale">For Sale</button>
+                <button class="filter-btn" data-filter="rent">For Rent</button>
+                <button class="filter-btn" data-filter="new">New Construction</button>
+            </div>
+            
+            <div class="properties-grid" id="properties-grid">
+                <!-- Property cards will be populated by JavaScript -->
+            </div>
+            
+            <div class="load-more-container">
+                <button class="btn-secondary" onclick="loadMoreProperties()">
+                    Load More Properties
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Comprehensive real estate and construction solutions</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Property Sales</h3>
+                    <p>Expert guidance through luxury property transactions with personalized service and market insights.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>Property Rentals</h3>
+                    <p>Premium rental properties managed with excellence, ensuring quality tenants and maximum returns.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3>Custom Construction</h3>
+                    <p>Bespoke construction services bringing your architectural dreams to life with precision craftsmanship.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Investment Advisory</h3>
+                    <p>Strategic real estate investment consulting to maximize your portfolio's growth potential.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Property Management</h3>
+                    <p>Full-service property management ensuring your investments are maintained to the highest standards.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Consultation</h3>
+                    <p>Expert consultation services for all your real estate needs, from buying to development planning.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mortgage Calculator -->
+    <section class="calculator">
+        <div class="container">
+            <div class="calculator-content">
+                <div class="calculator-info">
+                    <h2>Mortgage Calculator</h2>
+                    <p>Calculate your monthly payments and see how much home you can afford with our advanced mortgage calculator.</p>
+                    <div class="calculator-features">
+                        <div class="feature">
+                            <i class="fas fa-calculator"></i>
+                            <span>Accurate Calculations</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>Payment Breakdown</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Mobile Friendly</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="calculator-widget">
+                    <div class="calc-form">
+                        <div class="calc-row">
+                            <div class="calc-field">
+                                <label for="home-price">Home Price</label>
+                                <input type="number" id="home-price" placeholder="$500,000" value="500000">
+                            </div>
+                            <div class="calc-field">
+                                <label for="down-payment">Down Payment</label>
+                                <input type="number" id="down-payment" placeholder="$100,000" value="100000">
+                            </div>
+                        </div>
+                        
+                        <div class="calc-row">
+                            <div class="calc-field">
+                                <label for="interest-rate">Interest Rate (%)</label>
+                                <input type="number" id="interest-rate" placeholder="3.5" value="3.5" step="0.1">
+                            </div>
+                            <div class="calc-field">
+                                <label for="loan-term">Loan Term (Years)</label>
+                                <select id="loan-term">
+                                    <option value="15">15 Years</option>
+                                    <option value="30" selected>30 Years</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <button class="calc-btn" onclick="calculateMortgage()">
+                            <i class="fas fa-calculator"></i>
+                            Calculate Payment
+                        </button>
+                    </div>
+                    
+                    <div class="calc-results" id="calc-results">
+                        <div class="result-item">
+                            <span class="result-label">Monthly Payment</span>
+                            <span class="result-value" id="monthly-payment">$0</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Total Interest</span>
+                            <span class="result-value" id="total-interest">$0</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Total Payment</span>
+                            <span class="result-value" id="total-payment">$0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Contact Button -->
+    <div class="sticky-contact" id="sticky-contact">
+        <button class="sticky-btn" onclick="openContactModal()">
+            <i class="fas fa-phone"></i>
+            <span>Contact Us</span>
+        </button>
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="modal" id="contact-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Get In Touch</h3>
+                <button class="modal-close" onclick="closeContactModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="contact-form" id="contact-form">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="first-name">First Name *</label>
+                            <input type="text" id="first-name" name="firstName" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="last-name">Last Name *</label>
+                            <input type="text" id="last-name" name="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="interest">I'm Interested In</label>
+                        <select id="interest" name="interest">
+                            <option value="buying">Buying a Property</option>
+                            <option value="selling">Selling a Property</option>
+                            <option value="renting">Renting a Property</option>
+                            <option value="construction">Custom Construction</option>
+                            <option value="investment">Investment Opportunities</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your requirements..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary-full">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="section-header">
+                        <h2 class="section-title">About LuxeEstates</h2>
+                        <p class="section-subtitle">Excellence in luxury real estate for over two decades</p>
+                    </div>
+                    <p class="about-description">
+                        Since 2001, LuxeEstates has been the premier destination for luxury real estate and custom construction services. 
+                        Our commitment to excellence, attention to detail, and personalized service has earned us the trust of discerning 
+                        clients worldwide.
+                    </p>
+                    <div class="about-achievements">
+                        <div class="achievement">
+                            <div class="achievement-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>Award Winning</h4>
+                                <p>Recognized as Top Real Estate Agency 5 years running</p>
+                            </div>
+                        </div>
+                        <div class="achievement">
+                            <div class="achievement-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>Expert Team</h4>
+                                <p>50+ certified professionals with decades of experience</p>
+                            </div>
+                        </div>
+                        <div class="achievement">
+                            <div class="achievement-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>Global Reach</h4>
+                                <p>International network spanning 25+ countries</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="about-image.jpg" alt="Luxury office interior" class="about-img">
+                    <div class="about-overlay">
+                        <div class="play-button" onclick="playAboutVideo()">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Meet Our Team</h2>
+                <p class="section-subtitle">Industry experts dedicated to your success</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="team-member-1.jpg" alt="Sarah Johnson">
+                        <div class="member-overlay">
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                                <a href="#"><i class="fas fa-phone"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Sarah Johnson</h3>
+                        <p class="member-role">CEO & Founder</p>
+                        <p class="member-bio">25+ years in luxury real estate with a passion for exceptional service and client satisfaction.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="team-member-2.jpg" alt="Michael Chen">
+                        <div class="member-overlay">
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                                <a href="#"><i class="fas fa-phone"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Michael Chen</h3>
+                        <p class="member-role">Head of Construction</p>
+                        <p class="member-bio">Award-winning architect specializing in luxury residential and commercial construction projects.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="team-member-3.jpg" alt="Emily Rodriguez">
+                        <div class="member-overlay">
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                                <a href="#"><i class="fas fa-phone"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Emily Rodriguez</h3>
+                        <p class="member-role">Senior Sales Director</p>
+                        <p class="member-bio">Top-performing agent with expertise in high-end property sales and client relationship management.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="team-member-4.jpg" alt="David Thompson">
+                        <div class="member-overlay">
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                                <a href="#"><i class="fas fa-phone"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>David Thompson</h3>
+                        <p class="member-role">Investment Advisor</p>
+                        <p class="member-bio">Financial expert helping clients maximize their real estate investment potential and portfolio growth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Trusted by thousands of satisfied clients worldwide</p>
+            </div>
+            
+            <div class="testimonials-slider" id="testimonials-slider">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-content">
+                        <div class="testimonial-text">
+                            <p>"LuxeEstates exceeded every expectation. Their attention to detail and personalized service made finding our dream home an absolute pleasure. The team's expertise in the luxury market is unmatched."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="client-1.jpg" alt="Jennifer Williams">
+                            </div>
+                            <div class="author-info">
+                                <h4>Jennifer Williams</h4>
+                                <p>Beverly Hills Resident</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="testimonial-text">
+                            <p>"The construction team at LuxeEstates brought our vision to life with incredible precision. From design to completion, every aspect was handled with professionalism and care. Truly exceptional work."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="client-2.jpg" alt="Robert Martinez">
+                            </div>
+                            <div class="author-info">
+                                <h4>Robert Martinez</h4>
+                                <p>Malibu Homeowner</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="testimonial-text">
+                            <p>"As an international investor, I needed a team I could trust completely. LuxeEstates delivered exceptional results, managing every detail of my property acquisitions with expertise and transparency."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="client-3.jpg" alt="Sophia Chang">
+                            </div>
+                            <div class="author-info">
+                                <h4>Sophia Chang</h4>
+                                <p>International Investor</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-controls">
+                <button class="testimonial-btn prev" onclick="prevTestimonial()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="testimonial-dots">
+                    <span class="dot active" onclick="currentTestimonial(1)"></span>
+                    <span class="dot" onclick="currentTestimonial(2)"></span>
+                    <span class="dot" onclick="currentTestimonial(3)"></span>
+                </div>
+                <button class="testimonial-btn next" onclick="nextTestimonial()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted Partners -->
+    <section class="partners">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Trusted Partners & Certifications</h2>
+                <p class="section-subtitle">Backed by industry leaders and recognized certifications</p>
+            </div>
+            
+            <div class="partners-grid">
+                <div class="partner-logo">
+                    <img src="partner-1.png" alt="Better Business Bureau">
+                </div>
+                <div class="partner-logo">
+                    <img src="partner-2.png" alt="National Association of Realtors">
+                </div>
+                <div class="partner-logo">
+                    <img src="partner-3.png" alt="Luxury Portfolio International">
+                </div>
+                <div class="partner-logo">
+                    <img src="partner-4.png" alt="Leading Real Estate Companies">
+                </div>
+                <div class="partner-logo">
+                    <img src="partner-5.png" alt="International Real Estate Federation">
+                </div>
+                <div class="partner-logo">
+                    <img src="partner-6.png" alt="Green Building Council">
+                </div>
+            </div>
+            
+            <div class="trust-badges">
+                <div class="badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>SSL Secured</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-award"></i>
+                    <span>BBB A+ Rating</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-certificate"></i>
+                    <span>Licensed & Insured</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-user-shield"></i>
+                    <span>Privacy Protected</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Map -->
+    <section class="location">
+        <div class="container">
+            <div class="location-content">
+                <div class="location-info">
+                    <h2>Visit Our Offices</h2>
+                    <p>Experience luxury real estate services at our premium locations worldwide.</p>
+                    
+                    <div class="office-locations">
+                        <div class="office">
+                            <div class="office-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="office-details">
+                                <h4>Beverly Hills Office</h4>
+                                <p>123 Luxury Avenue<br>Beverly Hills, CA 90210</p>
+                                <p><strong>Phone:</strong> +1-555-0123</p>
+                            </div>
+                        </div>
+                        
+                        <div class="office">
+                            <div class="office-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="office-details">
+                                <h4>Manhattan Office</h4>
+                                <p>456 Park Avenue<br>New York, NY 10016</p>
+                                <p><strong>Phone:</strong> +1-555-0124</p>
+                            </div>
+                        </div>
+                        
+                        <div class="office">
+                            <div class="office-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="office-details">
+                                <h4>Miami Office</h4>
+                                <p>789 Ocean Drive<br>Miami Beach, FL 33139</p>
+                                <p><strong>Phone:</strong> +1-555-0125</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-container">
+                    <div id="map" class="map"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Preview -->
+    <section class="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Latest Insights</h2>
+                <p class="section-subtitle">Stay informed with market trends and expert advice</p>
+            </div>
+            
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="blog-1.jpg" alt="Market trends">
+                        <div class="blog-category">Market Trends</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">December 15, 2024</span>
+                            <span class="blog-read-time">5 min read</span>
+                        </div>
+                        <h3>Luxury Real Estate Market Outlook for 2025</h3>
+                        <p>Discover the key trends shaping the luxury real estate market and what it means for buyers and sellers in the coming year.</p>
+                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="blog-2.jpg" alt="Investment tips">
+                        <div class="blog-category">Investment</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">December 12, 2024</span>
+                            <span class="blog-read-time">7 min read</span>
+                        </div>
+                        <h3>Smart Investment Strategies for High-End Properties</h3>
+                        <p>Learn expert strategies for maximizing returns on luxury real estate investments in today's competitive market.</p>
+                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="blog-3.jpg" alt="Construction trends">
+                        <div class="blog-category">Construction</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">December 10, 2024</span>
+                            <span class="blog-read-time">6 min read</span>
+                        </div>
+                        <h3>Sustainable Luxury: Green Building Trends</h3>
+                        <p>Explore the latest sustainable construction technologies and how they're revolutionizing luxury home building.</p>
+                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="blog-cta">
+                <a href="#" class="btn-secondary">View All Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Stay Updated</h2>
+                    <p>Get exclusive market insights, new property listings, and expert tips delivered to your inbox.</p>
+                </div>
+                <form class="newsletter-form" id="newsletter-form">
+                    <div class="newsletter-input">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="newsletter-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Subscribe
+                        </button>
+                    </div>
+                    <p class="newsletter-privacy">We respect your privacy. Unsubscribe at any time.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>LuxeEstates</h3>
+                        <p class="footer-tagline">Premium Properties</p>
+                    </div>
+                    <p class="footer-description">
+                        Leading luxury real estate and construction services with over 20 years of excellence. 
+                        Your dream property awaits.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Property Sales</a></li>
+                        <li><a href="#">Property Rentals</a></li>
+                        <li><a href="#">Custom Construction</a></li>
+                        <li><a href="#">Investment Advisory</a></li>
+                        <li><a href="#">Property Management</a></li>
+                        <li><a href="#">Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Locations</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Beverly Hills</a></li>
+                        <li><a href="#">Manhattan</a></li>
+                        <li><a href="#">Miami Beach</a></li>
+                        <li><a href="#">Malibu</a></li>
+                        <li><a href="#">The Hamptons</a></li>
+                        <li><a href="#">Aspen</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Luxury Avenue<br>Beverly Hills, CA 90210</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1-555-0123</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@luxeestates.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Mon-Fri: 9AM-6PM<br>Sat-Sun: 10AM-4PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2024 LuxeEstates. All rights reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                    <a href="#">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="script.js"></script>
+</body>
+</html>
